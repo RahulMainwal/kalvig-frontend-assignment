@@ -1,0 +1,226 @@
+body {
+ background-color: rgb(240, 240, 240);
+}
+
+#empty_section {
+ display: flex;
+ justify-content: center;
+ height: 90vh;
+ align-items: center;
+ padding: 0 20px;
+}
+
+#empty_section .container {
+ display: block;
+ text-align: center;
+}
+
+#empty_section .container img {
+ padding: 50px 0;
+ width: 300px;
+}
+
+#empty_section .container h1 {
+ color: rgb(46, 46, 46);
+}
+
+#empty_section .container p {
+ color: gray;
+}
+
+/* Add new todo button styles */
+#add_new_todo_button {
+ font-size: 40px;
+ width: 60px;
+ height: 60px;
+ border-radius: 50%;
+ border: none;
+ color: white;
+ background-color: #ee7c9e;
+ box-shadow: 1px 2px 10px 2px rgb(189, 179, 179);
+ position: fixed;
+ bottom: 30px;
+ right: 20px;
+ z-index: 55;
+}
+
+/* Modal styles */
+#modal {
+ display: none;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ background: rgba(48, 47, 47, 0.3);
+ backdrop-filter: blur(2px);
+ position: fixed;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ top: 0;
+ z-index: 60;
+ padding: 50px 20px;
+}
+
+#modal form .close_modal_button_container {
+ display: flex;
+ justify-content: end;
+ margin: -20px -10px auto auto;
+}
+
+#modal form #close_modal_button {
+ padding: 0;
+ height: 30px;
+ cursor: pointer;
+}
+
+#modal form {
+ background-color: white;
+ border-radius: 10px;
+ overflow: hidden;
+ width: 400px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ transition: transform 0.3s ease;
+ padding: 30px 20px 15px 20px;
+}
+
+#modal form label {
+ font-weight: bold;
+ font-size: 20px;
+}
+
+#modal form .text_content {
+ font-size: 18px;
+ padding: 5px 10px;
+ margin: 10px 0 10px 0;
+ outline-style: none;
+ border: 2px solid rgb(122, 122, 122);
+ border-radius: 5px;
+ width: 100%;
+}
+
+#modal form .text_content:focus {
+ border: 2px solid #707cec;
+ outline-style: none;
+ border-radius: 5px;
+}
+
+#modal form .checkbox_container {
+ display: flex;
+ position: relative;
+ gap: 10px;
+}
+
+#modal form .checkbox_container #todolist_check_box {
+ width: 20px;
+ height: 20px;
+ margin: 10px 0 25px 0;
+}
+
+#modal form .checkbox_container span {
+ margin-top: 10px;
+}
+
+#modal form .action_buttons {
+ display: flex;
+ gap: 10px;
+ justify-content: end;
+}
+
+#modal form .save_todo_button {
+ padding: 5px 20px;
+ cursor: pointer;
+ font-size: 14px;
+ padding: 10px 30px;
+}
+
+#modal form .save_todo_button {
+ background-color: #2980b9;
+ color: white;
+ font-weight: bold;
+ border: none;
+}
+
+#text_error_message {
+ color: red;
+}
+
+/* Todo list display styles */
+
+#todo_section {
+ height: 90vh;
+ width: 100%;
+ overflow-y: auto;
+}
+
+#todo_section #todo_container {
+ width: 600px;
+ padding: 0 20px;
+ max-width: 100%;
+ left: 0;
+ right: 0;
+ margin: auto;
+}
+
+#todo_section .todo_search_container {
+ display: flex;
+ gap: 10px;
+ justify-content: center;
+ margin: 20px 0;
+}
+
+#todo_section #todo_list_search_input {
+ font-size: 18px;
+ padding: 8px 5px;
+ width: 100%;
+}
+
+#todo_section #todo_list_type:hover {
+ cursor: pointer;
+ border: 2px solid black;
+}
+
+#todo_section #todo_container #todo_list {
+ list-style: none;
+ width: 100%;
+ left: 0;
+ right: 0;
+ margin: auto;
+ padding-bottom: 80px;
+}
+
+#todo_section #todo_container #todo_list .list_for_todo {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin: 10px auto;
+ border: 1px solid rgb(235, 235, 235);
+ border-radius: 10px;
+ padding: 10px;
+ background-color: white;
+ box-shadow: 0px 1px 5px 1px rgb(215, 214, 214);
+}
+
+#todo_section #todo_container #todo_list .list_for_todo:hover {
+ border: 1px solid black;
+}
+
+#todo_section #todo_container #todo_list .list_for_todo div {
+ display: flex;
+ gap: 10px;
+ width: 90%;
+ align-items: center;
+}
+
+#todo_section #todo_container #todo_list .list_for_todo div input {
+ width: 16px;
+ height: 16px;
+}
+
+#todo_section #todo_container #todo_list .list_for_todo span {
+ margin-top: 8px;
+}
+
+#todo_section #todo_container #todo_list .list_for_todo .completed {
+ text-decoration: line-through;
+ color: gray;
+}

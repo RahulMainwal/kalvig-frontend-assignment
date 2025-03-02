@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a todolist page to manage their tasks">
+    <meta name="keywords" content="Todolist, Idea, Task, note, todo">
+    <meta name="robots" content="index, follow">
+    <title>Todo - KALVIG ASSIGNMENT</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/todo.css">
+    <link rel="icon" href="./public/logo.png">
+    <!-- Google font to get better text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header starts -->
+    <header>
+        <h2 class="logo_headline"><a href="/">Todolist</a></h2>
+        <nav class="navigation_menus">
+            <div class="hamburger_menu">
+                <svg viewBox="0 0 24 24" width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_iconCarrier">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20.75 7C20.75 7.41421 20.4142 7.75 20 7.75L4 7.75C3.58579 7.75 3.25 7.41421 3.25 7C3.25 6.58579 3.58579 6.25 4 6.25L20 6.25C20.4142 6.25 20.75 6.58579 20.75 7Z"
+                            fill="#ffffff"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20.75 12C20.75 12.4142 20.4142 12.75 20 12.75L4 12.75C3.58579 12.75 3.25 12.4142 3.25 12C3.25 11.5858 3.58579 11.25 4 11.25L20 11.25C20.4142 11.25 20.75 11.5858 20.75 12Z"
+                            fill="#ffffff"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20.75 17C20.75 17.4142 20.4142 17.75 20 17.75L4 17.75C3.58579 17.75 3.25 17.4142 3.25 17C3.25 16.5858 3.58579 16.25 4 16.25L20 16.25C20.4142 16.25 20.75 16.5858 20.75 17Z"
+                            fill="#ffffff"></path>
+                    </g>
+                </svg>
+            </div>
+            <ul class="navigation_links">
+                <li><a href="./todo.html">Home</a></li>
+                <li><a href="./todo.html" class="active_nav_link">Todo</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Header ends -->
+
+    <!-- Empty todo section starts -->
+    <section id="empty_section">
+        <div class="container">
+            <img src="./public/todo-empty.png" alt="empty todo list" />
+            <h1>Empty!</h1>
+            <p>I think you have not saved your idea yet. Click on the plus button to start writing.</p>
+        </div>
+    </section>
+    <!-- Empty todo section ends -->
+
+    <!-- Main content starts -->
+    <main id="main_section">
+
+        <!-- Add button floating on screen -->
+        <button id="add_new_todo_button">+</button>
+
+        <!-- Modal for adding new todo -->
+        <section id="modal">
+            <form id="modal_form">
+                <div class="close_modal_button_container">
+                    <span id="close_modal_button">
+                        <svg viewBox="0 0 24 24" width="30px" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <rect width="24" height="24" fill="white"></rect>
+                                <path d="M7 17L16.8995 7.10051" stroke="#000000" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M7 7.00001L16.8995 16.8995" stroke="#000000" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+                <label for="todolist_text_input">Task, ideas or note</label><br />
+                <input type="text" id="todolist_text_input" class="text_content"
+                    placeholder="Write something here" /><br />
+                <span id="text_error_message"></span>
+                <div class="checkbox_container">
+                    <input type="checkbox" id="todolist_check_box" />
+                    <span id="checkbox_text">Incompleted</span>
+                </div>
+                <div class="action_buttons">
+                    <input class="save_todo_button" id="save_todo_text_button" type="submit" value="Save" />
+                </div>
+            </form>
+        </section>
+
+        <!-- Todo list to display its elements -->
+        <section id="todo_section">
+            <div id="todo_container">
+                <div class="todo_search_container">
+                    <input id="todo_list_search_input" type="search" placeholder="Search your Task, ideas or note" />
+                </div>
+                <ul id="todo_list"></ul>
+            </div>
+        </section>
+
+    </main>
+    <!-- Main content ends -->
+
+    <!-- Scripts -->
+    <script src="./scripts/common.js"></script>
+    <script src="./scripts/todo.js"></script>
+</body>
+
+</html>
